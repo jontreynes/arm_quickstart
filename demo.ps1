@@ -5,10 +5,8 @@ $rgName = "machsresourcegroup"
 New-AzureRmResourceGroup -Name $rgName -Location "South Central US"
 
 [hashtable] $parameters = @{ 
-                            "virtualMachineSize" = "Standard_DS1_v2";
-                            "adminUsername" = "youradminname";
-                            "adminPassword" = "yourpassword"
-                            
+                            "exactTemplateParameter1" = "localVariabletoPass1";
+                            "exactTemplateParameter2" = "localVariabletoPass2";
                             }
 
 New-AzureRmResourceGroupDeployment -ResourceGroupName $rgName `
